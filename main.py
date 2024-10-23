@@ -25,10 +25,25 @@ def encode(password):
 
     return encoded_password
 
-# decode method writen by <name>
+# decode method writen by <VALERIA RUBIO>
 def decode(encoded_password):
-    # temporary definition
-    pass
+    result=''
+    for digit in encoded_password:
+        newdigit=(int(digit)-3)
+        if newdigit < 0:
+            newdigit=newdigit+10 #to wrap around when a negative is found, ie if 2, it will return 9
+        result+=str(newdigit)
+    return result
+
+
+
+
+
+
+
+
+
+
 
 # main method writen by Vincent Zvolsky
 if __name__ == "__main__":
